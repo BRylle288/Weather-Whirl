@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Sign-In</title>
+  <link rel="stylesheet" href="style.css" /> <!-- Link to external CSS -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="script.js" defer></script> <!-- Link to external JavaScript -->
+</head>
+<body style="background: url('background image.jpeg') no-repeat center center fixed; background-size: cover;">
+  <div class="signin">
+    <h1>Weather Whirl</h1>
+    <p>Your personal weather companion, delivering real-time forecasts with a sleek, user-friendly interface.</p>
+
+    <!-- Google Sign-In Button -->
+    <div id="g_id_onload"
+         data-client_id="1023943159405-qpf23opfh6elt3sf5cs2lsr02r50n6sa.apps.googleusercontent.com"
+         data-callback="http://127.0.0.1:5500 "
+         data-auto_prompt="false">
+    </div>
+    <div class="g_id_signin" data-type="standard"></div>
+  </div>
+</body>
+</html>

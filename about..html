@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  
+  <!-- Import External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Font Awesome for Icons (Updated) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <div class="weather-card">
+    <div class="search-bar">
+      <input type="text" id="locationInput" placeholder="Enter Your Location">
+      <button id="searchButton" onclick="getWeather()">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+    
+    <div class="weather-info">
+      <h2 id="city">Manila, Philippines</h2>
+      <div class="weather-icon">
+        <img src="https://openweathermap.org/img/wn/01d.png" id="weatherIcon" alt="Current Weather Icon">
+      </div>
+      <div class="weather-temp" id="temperature">28°C</div>
+      <div class="weather-condition" id="condition">Overcast Clouds</div>
+    <div class="weather-updated">
+ <span id="updatedTime">Not updated yet</span>
+    </div>
+    </div>
+    
+    <div class="weather-details">
+      <div>
+        <i class="fas fa-tint"></i>
+        <p><span id="humidity">59%</span><br>Humidity</p>
+      </div>
+      <div>
+        <i class="fas fa-wind"></i>
+        <p><span id="windSpeed">4Km/h</span><br>Wind Speed</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Link to JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

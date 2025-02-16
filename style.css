@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure hidden class properly works */
+.hidden {
+    display: none;
+}
+
+/* Weather Icons */
+.weather-img {
+    width: 150px;
+    height: 120px;
+    display: none; /* Hide all icons by default */
+}
+
+/* Show only the active icon */
+.weather-img.active {
+    display: block;
+}
+
+/* Rest of your styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    background-image: url("https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?cs=srgb&dl=pexels-pixabay-209831.jpg&fm=jpg");
+    animation: bgColor 10s infinite alternate ease-in-out;
+    background-size: cover;
+}
+
+/* Weather Card */
+.weather-card {
+    width: 460px; /* Increased width */
+    padding: 40px; /* Increased padding */
+    background: rgba(0, 0, 0, 0.4); /* Darker overlay to contrast with text */
+    background-blend-mode: brightness(1.2) contrast(1.5);
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+    position: relative;
+    z-index: 10;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Softer transparent outline */
+}
+
+.weather-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.6);
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.35); /* Darker background */
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    outline: none;
+}
+
+.search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.search-bar button:hover {
+    color: #ffcc00; /* Accent color for button hover */
+}
+
+/* Weather Info */
+
+.weather-icon img {
+    width: 120px;
+    margin: 25px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.weather-temp {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.weather-condition {
+    font-size: 24px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+}
+
+/* Weather Details */
+.weather-details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    font-size: 18px;
+    opacity: 0.75;
+}
+
+.weather-details div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Background based on weather conditions */
+body.clear-day {
+    background: linear-gradient(135deg, #f0b90b, #fcbf49); /* Golden hour bright skies */
+}
+
+body.clear-night {
+    background: linear-gradient(135deg, #0e3b56, #1c2f3d); /* Deep navy and starry skies */
+}
+
+body.cloudy {
+    background: linear-gradient(135deg, #c0c0c0, #9e9e9e); /* Soft gray clouds */
+}
+
+body.rainy {
+    background: linear-gradient(135deg, #4b8e8d, #00695c); /* Cool, refreshing rain */
+}
+
+body.thunderstorm {
+    background: linear-gradient(135deg, #616161, #37474f); /* Dark stormy clouds */
+}
+
+body.snow {
+    background: linear-gradient(135deg, #b2ebf2, #4fc3f7); /* Light icy blues for a snowy feel */
+}
+
+body.mist {
+    background: linear-gradient(135deg, #90a4ae, #607d8b); /* Misty and foggy cool tones */
+}
+
+/* Responsive */
+@media (max-width: 450px) {
+    .weather-card {
+        width: 100%;
+        padding: 30px;
+    }
+    .weather-temp {
+        font-size: 50px;
+    }
+    .weather-condition {
+        font-size: 22px;
+    }
+}

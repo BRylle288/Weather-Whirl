@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-image: url(background\ image.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.signin{
+    
+    padding: 40px;  
+    border: 1px solid black;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.signin h1{
+    font-size: 40px;
+    color: rgb(255, 238, 0);
+    margin-bottom: 30px;
+    align-items: center;
+    text-align: center;
+}
+
+.signin h2{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+    align-items: center;
+    text-align: center;
+}
+
+.signin p{
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 5px;
+}
+
+#signin-button {
+    margin-top: 20px;
+    background: rgb(0, 0, 0);
+    border: 1px solid black;
+}
+
+#signin-button:hover{
+    background: red;
+    border: 1px solid red;
+}
+
+#profile-info {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
