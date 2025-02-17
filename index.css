@@ -119,7 +119,7 @@ p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    
+
 }
     .signin {
         padding: 30px;
@@ -139,5 +139,7 @@ p {
     }
 
     #signin-button {
+        
+    }
         width: 100%;
         font-s
