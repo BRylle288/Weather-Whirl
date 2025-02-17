@@ -73,7 +73,7 @@ body {
 }
 
 #profile-info {
-    display: center;
+    display: none;
     margin-top: 20px;
     text-align: center;
 }
