@@ -88,8 +88,39 @@ body {
     transform: scale(1.05);
 }
 
+/* Additional Styles (from your second code snippet) */
+.signin {
+    background: rgba(255, 255, 255, 0.1); /* lightened the background */
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    
+}
     .signin {
         padding: 30px;
         width: 90%;
@@ -109,27 +140,4 @@ body {
 
     #signin-button {
         width: 100%;
-        font-size: 16px;
-        padding: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .signin {
-        width: 95%;
-        padding: 20px;
-    }
-
-    .signin h1 {
-        font-size: 24px;
-    }
-
-    .logo {
-        width: 50px;
-    }
-
-    #signin-button {
-        padding: 12px;
-        font-size: 16px;
-    }
-}
+        font-s
