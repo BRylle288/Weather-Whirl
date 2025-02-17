@@ -178,3 +178,23 @@ body.mist {
         font-size: 22px;
     }
 }
+.out {
+    position: absolute; /* Place it at a fixed location */
+    top: 20px; /* Adjust top position */
+    left: 20px; /* Adjust left position */
+}
+
+.out button {
+    background-color: #ff4d4d; /* Red logout button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.out button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
