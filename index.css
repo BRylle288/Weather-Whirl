@@ -1,9 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
     word-spacing: 2px;
     letter-spacing: 2px;
+    box-sizing: border-box; /* Ensures padding/margins don't affect element sizes */
 }
 
 body {
@@ -13,49 +14,47 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
-    background-image: url(background image.jpeg);
-    background-repeat: no-repeat;
+    background: url('Background.jpg') no-repeat center center fixed; /* Corrected background image path */
     background-size: cover;
 }
 
 .signin {
     padding: 40px;
-    border: 1px solid black;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for visibility */
     border-radius: 10px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-
+    
     /* Centering the div */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center; /* Ensures text inside is centered */
+    text-align: center;
     width: 400px; /* Adjust width as needed */
-    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a slight transparent background */
+    
+    background: rgba(0, 0, 0, 0.2); /* Fully transparent with a slight tint */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Optional: subtle shadow for better visibility */
 }
 
+}
 
 .signin h1 {
     font-size: 40px;
     color: rgb(255, 238, 0);
     margin-bottom: 30px;
-    text-align: center; /* Ensures text is centered */
-    display: block; /* Ensures it behaves properly */
-    width: 100%; /* Makes sure it spans full width of .signin */
+    text-align: center;
+    width: 100%;
 }
 
-
-
-.signin h2{
+.signin h2 {
     font-size: 20px;
     color: rgb(255, 255, 255);
     margin-bottom: 30px;
-    align-items: center;
     text-align: center;
 }
 
-.signin p{
+.signin p {
     font-size: 15px;
     color: rgb(255, 255, 255);
     margin-bottom: 5px;
@@ -64,10 +63,14 @@ body {
 #signin-button {
     margin-top: 20px;
     background: rgb(0, 0, 0);
+    color: white;
+    padding: 10px 20px;
     border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-#signin-button:hover{
+#signin-button:hover {
     background: red;
     border: 1px solid red;
 }
