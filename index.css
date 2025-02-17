@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +19,7 @@ body {
     background-size: cover;
 }
 
-/* 🔹 Stylish & Responsive Sign-in Box */
+/* Sign-in Box */
 .signin {
     padding: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -33,44 +34,34 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     
-    width: 90%; /* Flexible width for responsiveness */
+    width: 90%;
     max-width: 500px;
     height: auto;
     
-    background: rgba(0, 0, 0, 0.5); /* Frosted glass effect */
+    background: rgba(0, 0, 0, 0.5);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* 🔹 Logo */
-.logo {
-    width: 50px;
-    height: auto;
-    vertical-align: middle;
-    margin-right: 10px;
+/* Title & Logo */
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
 }
 
-/* 🔹 Title & Text */
+.logo {
+    width: 100px;
+    height: auto;
+}
+
 .signin h1 {
-    font-size: 40px;
+    font-size: 45px;
     color: rgb(255, 238, 0);
     margin-bottom: 20px;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.signin h1 img {
-    width: 40px;
-    height: auto;
-    margin-right: 10px;
-}
-
-.signin h2 {
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    margin-bottom: 20px;
-    text-align: center;
+    letter-spacing: 3px;
+    word-spacing: 3px;
 }
 
 .signin p {
@@ -79,7 +70,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* 🔹 Sign-in Button */
+/* Sign-in Button */
 #signin-button {
     margin-top: 20px;
     background: rgb(0, 0, 0);
@@ -97,15 +88,8 @@ body {
     transform: scale(1.05);
 }
 
-/* 🔹 Profile Info */
-#profile-info {
-    display: none;
-    margin-top: 20px;
-    text-align: center;
-}
-
-/* 🔹 Responsive Design */
-@media (max-width: 768px) { /* Tablets & Mobile */
+/* Responsive Design */
+@media (max-width: 768px) {
     .signin {
         padding: 30px;
         width: 90%;
@@ -120,7 +104,7 @@ body {
     }
 
     .logo {
-        width: 40px;
+        width: 60px;
     }
 
     #signin-button {
@@ -130,7 +114,7 @@ body {
     }
 }
 
-@media (max-width: 480px) { /* Small Phones */
+@media (max-width: 480px) {
     .signin {
         width: 95%;
         padding: 20px;
@@ -141,7 +125,7 @@ body {
     }
 
     .logo {
-        width: 35px;
+        width: 50px;
     }
 
     #signin-button {
