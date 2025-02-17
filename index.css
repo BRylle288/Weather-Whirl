@@ -13,7 +13,7 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
-    background-image: url(sky bground.jpeg);
+    background-image: url(background image.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
 }
