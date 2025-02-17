@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Google Sign-In</title>
-  <link rel="stylesheet" href="style.css" /> <!-- Link to external CSS -->
-  <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <script src="script.js" defer></script> <!-- Link to external JavaScript -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  
+  <!-- Import External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Font Awesome for Icons (Updated) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-<body style="background: url('background image.jpeg') no-repeat center center fixed; background-size: cover;">
-  <div class="signin">
-    <h1>Weather Whirl</h1>
-    <p>Your personal weather companion, delivering real-time forecasts with a sleek, user-friendly interface.</p>
-
-    <!-- Google Sign-In Button -->
-    <div id="g_id_onload"
-         data-client_id="1023943159405-qpf23opfh6elt3sf5cs2lsr02r50n6sa.apps.googleusercontent.com"
-         data-login _uri="http:localhost:5500"
-         data-login uri= https://brylle288.github.io
-         data-login_uri="https://brylle288.github.io/Weather-Whirl/auth/google/callback"
-         data-auto_prompt="false">
+<body>
+  <div class="weather-card">
+    <div class="search-bar">
+      <input type="text" id="locationInput" placeholder="Enter Your Location">
+      <button id="searchButton" onclick="getWeather()">
+        <i class="fas fa-search"></i>
+      </button>
     </div>
-    <div class="g_id_signin" data-type="standard"></div>
+    
+    <div class="weather-info">
+      <h2 id="city">Manila, Philippines</h2>
+      <div class="weather-icon">
+        <img src="https://openweathermap.org/img/wn/01d.png" id="weatherIcon" alt="Current Weather Icon">
+      </div>
+      <div class="weather-temp" id="temperature">28°C</div>
+      <div class="weather-condition" id="condition">Overcast Clouds</div>
+    <div class="weather-updated">
+ <span id="updatedTime">Not updated yet</span>
+    </div>
+    </div>
+    
+    <div class="weather-details">
+      <div>
+        <i class="fas fa-tint"></i>
+        <p><span id="humidity">59%</span><br>Humidity</p>
+      </div>
+      <div>
+        <i class="fas fa-wind"></i>
+        <p><span id="windSpeed">4Km/h</span><br>Wind Speed</p>
+      </div>
+    </div>
   </div>
+  
+  <!-- Link to JavaScript file -->
+  <script src="script.js"></script>
 </body>
 </html>
