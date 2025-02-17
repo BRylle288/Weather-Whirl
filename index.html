@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,10 +7,13 @@
   <link rel="stylesheet" href="index.css" /> <!-- Link to external CSS -->
   <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
-<body style="background: url('Background.jpg') no-repeat center center fixed; background-size: cover;">
-
+<body>
   <div class="signin">
-    <h1>Weather Whirl</h1>
+    <div class="title-container">
+      <img src="weather Logo.png" alt="Weather Logo" class="logo">
+      <h1>Weather Whirl</h1>
+    </div>
+    
     <p>Your personal weather companion, delivering real-time forecasts with a sleek, user-friendly interface.</p>
 
     <!-- Google Sign-In Button -->
@@ -31,7 +34,7 @@
         // Save user session
         localStorage.setItem("userSignedIn", "true");
         
-        // Redirect to the weather page (index.html)
+        // Redirect to the weather page (about.html)
         window.location.href = "about.html";
     }
 
@@ -47,6 +50,5 @@
         window.location.href = "index.html"; // Redirect back to login page
     }
   </script>
-
 </body>
 </html>
