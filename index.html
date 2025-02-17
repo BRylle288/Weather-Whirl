@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
-  
-  <!-- Import External Stylesheet -->
-  <link rel="stylesheet" href="style.css">
-  
-  <!-- Font Awesome for Icons (Updated) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Sign-In</title>
+  <link rel="stylesheet" href="style.css" /> <!-- Link to external CSS -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
-<body>
-  <div class="weather-card">
-    <div class="search-bar">
-      <input type="text" id="locationInput" placeholder="Enter Your Location">
-      <button id="searchButton" onclick="getWeather()">
-        <i class="fas fa-search"></i>
-      </button>
-    </div>
-    
-    <div class="weather-info">
-      <h2 id="city">Manila, Philippines</h2>
-      <div class="weather-icon">
-        <img src="https://openweathermap.org/img/wn/01d.png" id="weatherIcon" alt="Current Weather Icon">
-      </div>
-      <div class="weather-temp" id="temperature">28°C</div>
-      <div class="weather-condition" id="condition">Overcast Clouds</div>
-    <div class="weather-updated">
- <span id="updatedTime">Not updated yet</span>
-    </div>
-    </div>
-    
-    <div class="weather-details">
-      <div>
-        <i class="fas fa-tint"></i>
-        <p><span id="humidity">59%</span><br>Humidity</p>
-      </div>
-      <div>
-        <i class="fas fa-wind"></i>
-        <p><span id="windSpeed">4Km/h</span><br>Wind Speed</p>
-      </div>
-    </div>
+<body style="background: url('background image.jpeg') no-repeat center center fixed; background-size: cover;">
+
+  <div class="signin">
+    <h1>Weather Whirl</h1>
+    <p>Your personal weather companion, delivering real-time forecasts with a sleek, user-friendly interface.</p>
+
+    <div id="g_id_onload"
+     data-client_id="1023943159405-qpf23opfh6elt3sf5cs2lsr02r50n6sa.apps.googleusercontent.com"
+     data-callback="handleCredentialResponse"
+     data-login_uri="https://brylle288.github.io"
+     data-auto_prompt="false">
+</div>
+
+    <div class="g_id_signin" data-type="standard"></div>
   </div>
-  
-  <!-- Link to JavaScript file -->
-  <script src="script.js"></script>
+
+  <script>
+    function handleCredentialResponse(response) {
+        console.log("Google Sign-In Successful", response);
+        // Save user session if needed
+        localStorage.setItem("userSignedIn", "true");  
+        
+        // Redirect to the weather page (index.html)
+        window.location.href = "index.html"; 
+    }
+
+    // Auto-redirect if user is already signed in
+    document.addEventListener("DOMContentLoaded", function () {
+        if (localStorage.getItem("userSignedIn") === "true") {
+            window.location.href = "index.html"; // Redirect to weather page
+        }
+    });
+
+    // Logout function
+    function logout() {
+        localStorage.removeItem("userSignedIn"); 
+        window.location.href = "about.html"; // Redirect back to login page
+    }
+  </script>
+
+  <!-- Logout Button (Optional) -->
+  <button onclick="logout()">Logout</button>
+
 </body>
 </html>
