@@ -32,19 +32,19 @@
         localStorage.setItem("userSignedIn", "true");  
         
         // Redirect to the weather page (index.html)
-        window.location.href = "index.html"; 
+        window.location.href = "about.html"; 
     }
 
     // Auto-redirect if user is already signed in
     document.addEventListener("DOMContentLoaded", function () {
         if (localStorage.getItem("userSignedIn") === "true") {
-            window.location.href = "index.html"; // Redirect to weather page
+            window.location.href = "about.html"; // Redirect to weather page
         }
     });
 
     function logout() {
         localStorage.removeItem("userSignedIn"); 
-        window.location.href = "about.html"; // Redirect back to login page
+        window.location.href = "index.html"; // Redirect back to login page
     }
   </script>
 
