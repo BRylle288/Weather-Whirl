@@ -13,12 +13,13 @@
     <h1>Weather Whirl</h1>
     <p>Your personal weather companion, delivering real-time forecasts with a sleek, user-friendly interface.</p>
 
+    <!-- Google Sign-In Button -->
     <div id="g_id_onload"
-     data-client_id="1023943159405-qpf23opfh6elt3sf5cs2lsr02r50n6sa.apps.googleusercontent.com"
-     data-callback="handleCredentialResponse"
-     data-login_uri="https://brylle288.github.io"
-     data-auto_prompt="false">
-</div>
+         data-client_id="1023943159405-qpf23opfh6elt3sf5cs2lsr02r50n6sa.apps.googleusercontent.com"
+         data-callback="handleCredentialResponse"
+         data-login_uri="https://brylle288.github.io/Weather-Whirl/"
+         data-auto_prompt="false">
+    </div>
 
     <div class="g_id_signin" data-type="standard"></div>
   </div>
@@ -26,7 +27,8 @@
   <script>
     function handleCredentialResponse(response) {
         console.log("Google Sign-In Successful", response);
-        // Save user session if needed
+
+        // Save user session
         localStorage.setItem("userSignedIn", "true");  
         
         // Redirect to the weather page (index.html)
@@ -39,6 +41,15 @@
             window.location.href = "index.html"; // Redirect to weather page
         }
     });
+
+    function logout() {
+        localStorage.removeItem("userSignedIn"); 
+        window.location.href = "about.html"; // Redirect back to login page
+    }
+  </script>
+
+  <!-- Logout Button -->
+  <button onclick="logout()" style="position: fixed; top: 20px; right: 20px; padding: 10px 15px;">Logout</button>
 
 </body>
 </html>
