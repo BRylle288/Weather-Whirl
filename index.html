@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="index.css" /> <!-- Link to external CSS -->
   <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
-<body style="background: url('background/image.jpeg') no-repeat center center fixed; background-size: cover;">
+<body style="background: url('Background.jpg') no-repeat center center fixed; background-size: cover;">
 
   <div class="signin">
     <h1>Weather Whirl</h1>
@@ -15,7 +15,7 @@
 
     <!-- Google Sign-In Button -->
     <div id="g_id_onload"
-         data-client_id="1023943159405-qpf23opfh6elt3sf5cs2lsr02r50n6sa.apps.googleusercontent.com"
+    data-client_id="1023943159405-qpf23opfh6elt3sf5cs2lsr02r50n6sa.apps.googleusercontent.com"
          data-callback="handleCredentialResponse"
          data-login_uri="https://brylle288.github.io"
          data-auto_prompt="false">
@@ -29,10 +29,10 @@
         console.log("Google Sign-In Successful", response);
 
         // Save user session
-        localStorage.setItem("userSignedIn", "true");  
+        localStorage.setItem("userSignedIn", "true");
         
         // Redirect to the weather page (index.html)
-        window.location.href = "about.html"; 
+        window.location.href = "about.html";
     }
 
     // Auto-redirect if user is already signed in
@@ -47,8 +47,6 @@
         window.location.href = "index.html"; // Redirect back to login page
     }
   </script>
-
-
 
 </body>
 </html>
