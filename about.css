@@ -185,16 +185,16 @@ body.mist {
 }
 
 .out button {
-    background-color: #ff4d4d; /* Red logout button */
+    background-color: #00000044; /* Red logout button */
     color: white;
     border: none;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 10px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.2s ease;
 }
 
 .out button:hover {
-    background-color: #cc0000; /* Darker red on hover */
+    background-color: #383838; /* Darker red on hover */
 }
